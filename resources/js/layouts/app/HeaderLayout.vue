@@ -94,22 +94,16 @@ const toggleMobileUserMenu = (event) => {
                                 </InertiaLink>
                             </div>
                         </template>
+                     
+                            
+                       
                         <template #end>
+                            
                             <!-- User Dropdown Menu -->
                             <div class="hidden lg:flex items-center ms-6 space-x-3">
+                               <h4>Pontos: {{ page.props.auth.user.points }}</h4>
                                 <div class="flex flex-col">
-                                    <Button
-                                        id="user-menu-btn"
-                                        :label="page.props.auth.user.name"
-                                        pt:root:class="flex flex-row-reverse justify-between"
-                                        severity="secondary"
-                                        text
-                                        @click="toggleUserMenu($event)"
-                                    >
-                                        <template #icon>
-                                            <ChevronDown />
-                                        </template>
-                                    </Button>
+                                    
                                     <div
                                         id="user-menu-append"
                                         class="relative"
@@ -122,6 +116,16 @@ const toggleMobileUserMenu = (event) => {
                                         popup
                                     />
                                 </div>
+                                 <Button
+                                        id="user-menu-btn"
+                                        :label="page.props.auth.user.name"
+                                        pt:root:class="flex flex-row-reverse justify-between"
+                                        severity="secondary"
+                                        text
+                                        @click="toggleUserMenu($event)"
+                                    >
+                                      
+                                    </Button>
                             </div>
 
                             <!-- Mobile Menu Toggle -->
